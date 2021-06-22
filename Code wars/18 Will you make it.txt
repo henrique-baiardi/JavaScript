@@ -1,0 +1,11 @@
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   50 milhas distancia
+//   25 milhas por galao
+//   2 galoes
+//   1 verdadeiro 2 falso
+  if( distanceToPump <= (mpg * fuelLeft) ){
+    return true;
+  }else{
+    return false;
+  }
+};

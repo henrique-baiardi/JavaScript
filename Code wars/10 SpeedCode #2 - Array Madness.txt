@@ -1,0 +1,18 @@
+function arrayMadness(a, b) {
+  // Ready, get set, GO!!!
+  let x = 0;
+  let y = 0;
+  
+  for( let i = 0; i < a.length; i++){
+    x += a[i] ** 2;
+    
+  }
+  
+  for( let o = 0; o < b.length; o++){
+    y += b[o] ** 3;
+    
+  }
+  
+  return x > y
+ 
+}

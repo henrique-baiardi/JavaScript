@@ -1,0 +1,4 @@
+function noSpace(x){
+let novo = x.split(' ').join('');
+  return novo;
+}

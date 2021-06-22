@@ -1,0 +1,11 @@
+function removeEveryOther(arr){
+  //your code here
+  let novo = []
+  
+  for( let i = 0 ; i < arr.length; i++ ){
+    if( i % 2 === 0){
+      novo.push(arr[i])
+    }
+  }  
+  return novo;
+}

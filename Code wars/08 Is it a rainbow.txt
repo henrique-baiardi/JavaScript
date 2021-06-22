@@ -1,0 +1,17 @@
+function sortRainbow(colour){
+  
+ let trueRainbow = ['red','orange','yellow','green','blue','indigo','violet'];
+ let gray = 0;
+  
+  for (let i = 0; i < colour.length; i++){
+   if (colour[i] === trueRainbow[i]){
+     gray++;
+   }
+  }
+  if (gray === 7){
+    return true;
+  }
+  else{
+    return false;
+  }
+}

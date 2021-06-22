@@ -1,0 +1,13 @@
+var findAverage = function (nums) {
+  // Code here
+  let soma = 0;
+  let resultado = 0;
+  
+  for( let i = 0; i< nums.length; i++){
+    
+    soma +=nums[i];
+  }
+  resultado = soma / nums.length;
+  
+  return resultado;
+}

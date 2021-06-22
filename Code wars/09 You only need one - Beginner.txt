@@ -1,0 +1,11 @@
+function check(a, x) {
+  // your code here
+  let resposta = false
+  
+  for( let i = 0; i < a.length; i++){
+    if(a[i] === x){
+      resposta = true;
+    }
+  }
+  return resposta;
+}

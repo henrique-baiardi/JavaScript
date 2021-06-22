@@ -1,0 +1,13 @@
+function past(h, m, s){
+  //#Happy Coding! ^_^
+  //1h == 60 min
+  //1min == 60 s
+  //1s = 1000 mili
+  let soma = 0;
+  
+  if( 0 <= h <= 23 && 0 <= m <= 59 && 0 <= s <= 59){
+      
+    soma = (h*3600 + m*60 + s)*1000;
+    }
+  return soma;
+}
