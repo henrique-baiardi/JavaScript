@@ -2,3 +2,4 @@ function noSpace(x){
 let novo = x.split(' ').join('');
   return novo;
 }
+//Simple, remove the spaces from the string, then return the resultant string.
