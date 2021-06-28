@@ -1,0 +1,19 @@
+//Numa brincadeira de esconde-esconde sempre sorteia-se um número aleatório,
+//que indica até quanto o jogador que vai procurar os outros deverá contar antes de começar a busca.
+//Contudo, seu irmão mais novo só sabe contar até 20 com segurança. 
+//Para números maiores, as vezes ele se atrapalha.
+
+//Para permitir que ele possa jogar, você fez um programa que, caso o número sorteado seja maior que 20,
+//imprime na tela todos os números de 21 até o número sorteado, cada um em uma linha, para auxiliar seu irmãozinho.
+
+function solucao(numero) {
+
+    if(numero <= 20){
+        console.log("VOCE CONSEGUE, MANINHO")
+    }else{
+        for(let i = 21; i <= numero; i++){
+            console.log(i)
+        }
+    }
+    
+}

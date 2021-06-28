@@ -1,0 +1,41 @@
+//Na escola, seu irmão mais novo estava estudando as cores primárias e suas combinações.
+//Para ajudá-lo a estudar, você resolveu fazer um programa que, dadas duas cores primárias, o programa informa qual a cor resultante das combinações dela.
+//Para fazer o programa, você se baseou na tabela abaixo:
+//Cor 1	Cor 2	Resultado
+//azul	amarelo	verde
+//azul	vermelho	roxo
+//amarelo	vermelho	laranja
+//A entrada do problema será sempre composta por duas variáveis cor1 e cor2 do tipo string.
+// Cada uma delas pode assumir o valor de azul, amarelo ou vermelho.
+
+function solucao(cor1, cor2) {
+    //azul, amarelo ou vermelho.
+    //verde = 11, roxo = 101, laranja = 110
+    let soma = 0;
+    
+    if(cor1 === "azul"){
+        soma += 1;
+    }
+    if(cor2 === "azul"){
+        soma += 1;
+    }
+   if(cor1 === "amarelo"){
+        soma += 10;
+    }
+    if(cor2 === "amarelo"){
+        soma += 10;
+    }if(cor1 === "vermelho"){
+        soma += 100;
+    }
+    if(cor2 === "vermelho"){
+        soma += 100;
+    }
+//----------------------------------------------------------------//
+    if(soma === 2){console.log("azul")}
+    if(soma === 20){console.log("amarelo")}
+    if(soma === 200){console.log("vermelho")}
+    if(soma === 11){console.log("verde")}
+    if(soma === 101){console.log("roxo")}
+    if(soma === 110){console.log("laranja")}
+    
+}

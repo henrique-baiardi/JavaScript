@@ -1,0 +1,31 @@
+Numa joalheria, os clientes são categorizados diferentemente a depender do quanto gastem na loja e a depender também do valor unitário dos itens que compram.
+
+Você foi contratado(a) para automatizar essa categorização.
+
+As categorias são:
+
+CLIENTES PREMIUM: são clientes que gastaram mais de 1000 reais em compras, sendo que pelo menos algum dos itens custou mais de 200 reais.
+CLIENTES VIP: são clientes que gastaram mais de 1000 reais, mas não compraram nenhum item acima de 200 reais.
+CLIENTE NORMAL: são todos os outros clientes, que não se enquadram em nenhuma das outras categorias
+
+function solucao(precos) {
+    
+    let totalPrecos = 0;
+    let itemPremio = false;
+    
+    for(let i = 0; i < precos.length; i++){
+        if(precos[i] > 200){
+            itemPremio = true;
+        }
+        totalPrecos += precos[i];
+    }
+    
+    if( totalPrecos > 1000 && itemPremio === true){
+        console.log("PREMIUM");
+    }else if(totalPrecos > 1000 && itemPremio === false){
+        console.log("VIP");
+    }else{
+        console.log("NORMAL")
+    }
+
+}
