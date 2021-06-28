@@ -1,0 +1,22 @@
+rasil com "P" é uma música bastante famosa, em que todas as palavras da música inteira começam com a letra "P".
+
+GOG, o compositor desta música, decidiu dar um próximo passo nesse estilo e fazer músicas em que todas as palavras comecem sempre com as mesmas duas primeiras letras. Contudo ele ainda não decidiu quais duas primeiras letras serão essas. Como está com um pequeno bloqueio no seu processo criativo ele decidiu analisar várias combinações e analisar as palavras que surgem para cada par de letras, e escolher o par a depender das palavras que surjam.
+
+Como apenas olhar no dicionário estava sendo bastante lento e entediante, ele te contratou para fazer um programa que, dado um par de letras qualquer, imprima na tela as palavras que começam com essas duas primeiras letras.
+
+function solucao(primeiraLetra, segundaLetra, palavras) {
+	//seu codigo aqui char
+    
+    let palavraComposta = false;
+    
+    for(let item of palavras){
+        if(item.charAt(0) === primeiraLetra && item.charAt(1) === segundaLetra){
+            console.log(item);
+            palavraComposta = true;
+        }
+    }
+    
+    if(palavraComposta === false){
+        console.log("NENHUMA")
+    }
+}
