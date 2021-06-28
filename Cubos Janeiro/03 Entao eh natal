@@ -1,0 +1,55 @@
+Você desenvolve para um aplicativo de entrega de alimentos e recebeu uma tarefa antes de sair de férias para o natal. A tarefa consiste em criar as novas regras natalinas de desconto e calcular o valor total da compra, considerando o frete.
+
+Existem três categorias de alimentos no seu app, SALGADO, DOCE e BEBIDA e a tabela de descontos é a seguinte:
+
+SALGADO	DOCE	BEBIDA
+10%	15%	30%
+Além disso, foram criados quatro cupons para novos usuários (primeira compra):
+
+NATAL10: 10% de desconto para compras acima de R$ 30,00;
+NATAL20: 20% de desconto para compras acima de R$ 45,00;
+NATAL30: 30% de desconto para compras acima de R$ 60,00;
+NATALSUPREMO: 30% de desconto e frete grátis para compras acima de R$ 80,00;
+O preço padrão do frete é R$ 1,20 por Km.
+
+A lógica do cáclulo do valor total a pagar é a seguinte:
+
+Primeiro calcula-se o valor a pagar pelos produtos, aplicando o cupom referente as suas categorias.
+Depois, caso o usuário tenha inserido algum cupom, valida-se se ele realmente pode usar aquele cupom. Caso possa, o desconto é aplicado sobre o valor calculado até então. Caso não possa, o cupom é simplesmente ignorado.
+Calcula-se o frete, caso o usuário não tenha utilizado o cupom que dá frete grátis, e soma-se ao valor a pagar até então.
+Imprima na tela, EM CENTAVOS, o valor total a se pagar.
+R$ 1,00 = 100 centavos.
+
+function solucao(produtos, distanciaRestaurante, cupomDesconto, ehPrimeiraCompra) {
+    
+ let totalProdutos = 0;
+
+for(let i = 0; i < produtos.length; i++){
+  
+    if(produtos[i].categoria == "SALGADO"){
+        totalProdutos += (produtos[i].valor * 0.9) * produtos[i].quantidade;
+    }else if(produtos[i].categoria == "DOCE"){
+        totalProdutos += (produtos[i].valor * 0.85) * produtos[i].quantidade;
+    }else{
+        totalProdutos += (produtos[i].valor * 0.7) * produtos[i].quantidade;
+    }//#################################################################### PARTE 1 
+}   if(ehPrimeiraCompra){
+        if(cupomDesconto === "NATAL10" && totalProdutos > 3000){
+            totalProdutos = (totalProdutos * 0.9);
+        }
+        if(cupomDesconto === "NATAL20" && totalProdutos > 4500){
+            totalProdutos = (totalProdutos * 0.8);
+        }
+        if(cupomDesconto === "NATAL30" && totalProdutos > 6000){
+            totalProdutos = (totalProdutos * 0.7);
+        }
+        if(cupomDesconto === "NATALSUPREMO" && totalProdutos > 8000){
+            totalProdutos = (totalProdutos * 0.7);
+        }
+    
+    }//#################################################################### PARTE 2
+    if(cupomDesconto !== "NATALSUPREMO"){
+        totalProdutos = (totalProdutos) + (distanciaRestaurante * 120);
+    }
+     console.log(totalProdutos);
+}

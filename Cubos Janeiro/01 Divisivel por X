@@ -1,0 +1,9 @@
+O objetivo desse exercicio é retornar se o número de entrada é divisível por x ou não.
+
+Seu programa receberá sempre de entrada: um número inteiro e outro número inteiro representando x e deverá imprimir na tela se o primeiro número de entrada é divisível por x.
+
+function solucao(numero, x) {
+	// seu código aqui
+    console.log(numero % x === 0);
+    
+}

@@ -1,0 +1,18 @@
+O Tesla Model X é um carro autônomo que consegue dirigir sozinho. Para evitar acidentes, o carro deve ser capaz de calcular qual a distância que ele percorrerá, ao iniciar o processo de frenagem, até parar.
+
+Você acabou de ser contratado(a) como desenvolver(a) de software na Tesla. Sua primeira tarefa é fazer um programa capaz de calcular essa distância. A fórmula para o cálculo é a seguinte:
+
+Distancia = -1 * (velociadade)^2 / 2 * aceleração
+
+Seu programa sempre receberá como entrada a a velocidade e a aceleração e deverá imprimir na tela a distância percorrida pelo carro até parar.
+
+Input Format
+
+A entrada será sempre composta por dois números inteiros: a velocidade e a aceleração.
+
+function solucao(velocidade, aceleracao) {
+	//seu código aqui  
+    const distancia = Math.abs( ((-velocidade)*(-velocidade)) / (2 * aceleracao)  );
+    console.log(distancia);
+  
+}

@@ -1,0 +1,24 @@
+Coincidência é um "jogo" muito utilizado por crianças quando querem formar duas equipes com quantidades iguais de pessoas aleatoriamente.
+
+Para isso um número par de crianças escolhe 0 ou 1 para jogar, todas na mesma hora. Todas as que jogarem 0 são selecionadas para uma equipe e todas que jogaram 1 são selecionadas para outra. Caso ambas as equipes tenham a mesma quantidade de crianças elas podem começar a jogar. Caso contrário, devem fazer um novo sorteio.
+
+Faça um programa que diga, a partir nos valores escolhidos pelas crianças, se elas podem começar a jogar ou se devem fazer um novo sorteio.
+
+Input Format
+
+A entrada será sempre um array cujo tamanho é um número par. Cada item desse array será um número 0 ou 1, representando o que foi escolhido por uma criança nessa rodada.
+
+function solucao(jogadas) {
+  
+    let timeA = 0;
+    let timeB = 0;
+    
+    for(let i = 0; i < jogadas.length; i++){
+        if( jogadas[i] === 0){
+            timeA += 1;
+        }else{
+            timeB += 1;
+        }
+    }
+    console.log( timeA === timeB);
+}

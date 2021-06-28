@@ -1,0 +1,22 @@
+Com o sucesso da sua ultima tarefa na Tesla, lhe foi passada uma melhoria.
+
+A melhoria consiste em mostrar no visor do carro se ele irá colidir com um objeto em sua frente, usando a fórmula da sua tarefa anterior e a distância do objeto.
+
+Seu programa sempre receberá como entrada a velocidade, aceleração e a distância do objeto e deverá imprimir na tela se o carro irá colidir ou não.
+
+Input Format
+
+A entrada será sempre três números inteiros: a velocidade, a aceleração e a distância.
+
+function solucao(velocidade, aceleracao, distanciaObjeto) {
+  //seu código aqui
+    const distanciaDerrapagem = -(velocidade * velocidade) / (2 * aceleracao);
+    
+    if(distanciaObjeto < distanciaDerrapagem){
+        console.log("COLISAO A FRENTE");
+    }else if(distanciaObjeto === distanciaDerrapagem){
+        console.log("NAO ACELERE");
+    }else{
+        console.log("CAMINHO SEGURO");
+    }
+}

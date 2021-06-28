@@ -1,0 +1,21 @@
+Toda black friday sua família combina de trocar presentes entre si. Qualquer familiar pode entrar na brincadeira, basta comprar um presente que atenda os requistos de preço e avaliação estipulados. Cada amigo secreto estipula um preço máximo e uma nota de avaliação mínima para seu presente. Cabe, a quem for presentear, atender a estes requisitos.
+
+Para agilizar o processo desse ano, você conseguiu acesso a uma lista de produtos e decidiu criar um programa para filtrá-los por avaliação e preço.
+
+Seu programa receberá sempre como entrada:
+
+a lista de produtos contendo o preço e a avaliação de cada um
+um número inteiro representando o valor máximo que o presente deve ter
+um número inteiro representando a avaliação mínima que o presente deve ter
+Seu programa deve imprimir na tela um array contendo apenas os produtos que podem ser dados como presente nesta situação.
+
+function solucao(produtos, valorMaximo, avaliacaoMinima) {
+
+    let filtro = [];
+    for(let i = 0; i < produtos.length; i++){
+        if((produtos[i].valor <= valorMaximo ) && (produtos[i].avaliacao >= avaliacaoMinima)){
+                filtro.push(produtos[i]);
+        }
+    }
+    console.log(filtro);
+}
